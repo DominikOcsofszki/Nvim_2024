@@ -13,8 +13,6 @@ vim.keymap.set('n' ,'di}','"_di}',{})
 vim.keymap.set('n','\\',':w<enter>',{})
 vim.keymap.set('n','|',':q<enter>',{})
 
-vim.keymap.set('n', '<leader>th', '<cmd>Telescope find_files hidden=true<cr>' ,{})
-vim.keymap.set('n', '<leader>tg', '<cmd>Telescope live_grep hidden=true<cr>' ,{})
 
 -- Diagnostic keymaps
 -- vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic message" })

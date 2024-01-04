@@ -6,11 +6,7 @@ return {
     vim.o.timeout = true
     vim.o.timeoutlen = 300
   end,
-  opts = {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-  }
+  opts = {}
 },
   {
     "folke/neodev.nvim", opts = {}
@@ -24,11 +20,4 @@ return {
       vim.cmd([[colorscheme tokyonight]])
     end,
   },
-
-
-  {
-    "nvim-tree/nvim-web-devicons", lazy = true
-  },
-
-
 }
