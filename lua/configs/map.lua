@@ -12,8 +12,11 @@ vim.keymap.set('n' ,'di}','"_di}',{})
 vim.keymap.set('n','\\',':w<enter>',{})
 vim.keymap.set('n','|',':q<enter>',{})
 
+vim.keymap.set('n', '<leader><space>', '/', {})
 
 vim.keymap.set('n', '<leader>oo', '<cmd>:NvimTreeFindFile<cr>', {desc = "<cmd>:NvimTreeFindFile<cr>"})
 
 vim.keymap.set('n', '<C-s>', require('nvim-tree.api').tree.toggle, {desc = "Tree toggle"})
 
+
+vim.keymap.set('n' ,'<leader>6' ,':ls<CR>:b<Space>',{})
