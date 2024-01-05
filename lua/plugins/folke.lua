@@ -8,9 +8,9 @@ return {
   end,
   opts = {}
 },
-  {
-    "folke/neodev.nvim", opts = {}
-  },
+  -- {
+  --   "folke/neodev.nvim", opts = {}
+  -- },
   {
     "folke/tokyonight.nvim",
     lazy = false, -- make sure we load this during startup if it is your main colorscheme
@@ -20,4 +20,6 @@ return {
       vim.cmd([[colorscheme tokyonight]])
     end,
   },
+        { 'numToStr/Comment.nvim', opts = {} },
+
 }
