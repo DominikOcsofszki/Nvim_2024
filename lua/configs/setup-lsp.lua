@@ -10,12 +10,12 @@ vim.api.nvim_create_autocmd("FileType",{
             -- root_dir = vim.fs.dirname(vim.fs.find({'lazy-lock.json'},            { upward = true })[1]),
             root_dir = vim.fn.getcwd(),
             filetypes = { 'lua' },
+settings = {
 
-
-            --     diagnostics = {
-            --     -- Get the language server to recognize the `vim` global
-            --     globals = { "vim" },
-            -- },
+                diagnostics = {
+                -- Get the language server to recognize the `vim` global
+                globals = { "vim" },
+            },}
         })
         vim.lsp.buf_attach_client(0, client)
     end
