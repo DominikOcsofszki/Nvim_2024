@@ -8,9 +8,7 @@ return {
   end,
   opts = {}
 },
-  -- {
-  --   "folke/neodev.nvim", opts = {}
-  -- },
+
   {
     "folke/tokyonight.nvim",
     lazy = false, -- make sure we load this during startup if it is your main colorscheme
@@ -22,4 +20,14 @@ return {
   },
         { 'numToStr/Comment.nvim', opts = {} },
 
+
+  {
+    "folke/neodev.nvim", opts = {},
+    config = function()
+        before_init=require("neodev.lsp").before_init
+                require("neodev").setup({  
+                    lspconfig = true,
+})
+                end
+            }
 }
