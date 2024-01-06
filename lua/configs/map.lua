@@ -13,6 +13,7 @@ vim.keymap.set('n','\\',':w<enter>',{})
 vim.keymap.set('n','|',':q<enter>',{})
 
 vim.keymap.set('n', '<leader><space>', '/', {})
+vim.keymap.set('v', '<leader><space>', '/', {})
 
 -- vim.keymap.set('n', '<leader>oo', '<cmd>:NvimTreeFindFile<cr>', {desc = "<cmd>:NvimTreeFindFile<cr>"})
 --
@@ -21,6 +22,8 @@ vim.keymap.set('n', '<leader><space>', '/', {})
 
 vim.keymap.set('n' ,'<leader>6' ,':ls<CR>:b<Space>',{})
 vim.keymap.set('n' ,'<leader>w' ,':Telescope file_browser path=%:p:h<enter><esc>',{})
-vim.keymap.set('n', '<Leader>e', ':e .<enter> <C-f>',{})
+vim.keymap.set('n', '<Leader>e', ':Telescope file_browser <enter><esc>',{})
 vim.keymap.set('n' ,'<leader>ss' ,':Telescope <enter>',{})
+vim.keymap.set('n' ,'<leader>f' ,':Telescope find_files <enter><esc>',{})
 
+vim.keymap.set('n',';',':',{})
