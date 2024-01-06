@@ -11,7 +11,7 @@ return {
 
     {
         "folke/tokyonight.nvim",
-        lazy = false, -- make sure we load this during startup if it is your main colorscheme
+        lazy = false,    -- make sure we load this during startup if it is your main colorscheme
         priority = 1000, -- make sure to load this before all the other start plugins
         config = function()
             -- load the colorscheme here
@@ -20,19 +20,13 @@ return {
     },
     { 'numToStr/Comment.nvim', opts = {} },
 
-
-        "folke/neodev.nvim",
-    -- {
-    --     "folke/neodev.nvim", opts ={
-    --           -- lspconfig = false,
-    --     },
-    -- }
-    --     , opts = {},
-    --     config = function()
-    --         before_init=require("neodev.lsp").before_init
-    --                 require("neodev").setup({  
-    --                     lspconfig = true,
-    -- })
-    --                 end
-    --             }
+    { "folke/neodev.nvim",     opts = {} }
 }
+--     , opts = {},
+--     config = function()
+--         before_init=require("neodev.lsp").before_init
+--                 require("neodev").setup({
+--                     lspconfig = true,
+-- })
+--                 end
+--             }
