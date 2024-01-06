@@ -30,5 +30,4 @@ vim.o.expandtab = true
 
 
 vim.o.swapfile = false
-vim.o.fdm = 'indent'
--- fold-indent
+-- vim.o.fdm = 'indent'

@@ -20,3 +20,4 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 require("lazy").setup("plugins")
 require("configs")
+require("lsp")
