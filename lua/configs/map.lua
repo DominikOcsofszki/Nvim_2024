@@ -1,5 +1,5 @@
 vim.keymap.set('n', 'Y','"pyy"pp',{})
-vim.keymap.set('n', '<Leader>e', ':e .<enter>',{})
+-- vim.keymap.set('n', '<Leader>e', ':e .<enter>',{})
 vim.keymap.set('n', '<leader>jr', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],{})
 
 -- yanking 
@@ -14,9 +14,13 @@ vim.keymap.set('n','|',':q<enter>',{})
 
 vim.keymap.set('n', '<leader><space>', '/', {})
 
-vim.keymap.set('n', '<leader>oo', '<cmd>:NvimTreeFindFile<cr>', {desc = "<cmd>:NvimTreeFindFile<cr>"})
-
-vim.keymap.set('n', '<C-s>', require('nvim-tree.api').tree.toggle, {desc = "Tree toggle"})
+-- vim.keymap.set('n', '<leader>oo', '<cmd>:NvimTreeFindFile<cr>', {desc = "<cmd>:NvimTreeFindFile<cr>"})
+--
+-- vim.keymap.set('n', '<C-s>', require('nvim-tree.api').tree.toggle, {desc = "Tree toggle"})
 
 
 vim.keymap.set('n' ,'<leader>6' ,':ls<CR>:b<Space>',{})
+vim.keymap.set('n' ,'<leader>w' ,':Telescope file_browser path=%:p:h<enter><esc>',{})
+vim.keymap.set('n', '<Leader>e', ':e .<enter> <C-f>',{})
+vim.keymap.set('n' ,'<leader>ss' ,':Telescope <enter>',{})
+

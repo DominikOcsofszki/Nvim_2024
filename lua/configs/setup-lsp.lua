@@ -3,23 +3,23 @@
 vim.api.nvim_create_autocmd("FileType",{
     pattern = "lua",
     callback = function()
-        local client = vim.lsp.start({
+        vim.lsp.start({
             name = 'lua_ls',
             cmd = { "lua-language-server"},
             before_init = require("neodev.lsp").before_init,
             -- root_dir = vim.fs.dirname(vim.fs.find({'lazy-lock.json'},            { upward = true })[1]),
             root_dir = vim.fn.getcwd(),
             filetypes = { 'lua' },
-settings = {
+            settings = {
 
                 diagnostics = {
-                -- Get the language server to recognize the `vim` global
-                globals = { "vim" },
-            },}
-        })
-        vim.lsp.buf_attach_client(0, client)
-    end
-})
+                    -- Get the language server to recognize the `vim` global
+                    globals = { "vim" },
+                },}
+            })
+            -- vim.lsp.buf_attach_client(0, client)
+        end
+    })
 
 vim.api.nvim_create_autocmd("FileType",{
     pattern = "*",
@@ -37,3 +37,11 @@ vim.api.nvim_create_autocmd("FileType",{
 })
 
 
+         -- vim.lsp.start({ name = 'lua_ls', cmd = { "lua-language-server"}, before_init = require("neodev.lsp").before_init, root_dir = vim.fs.dirname(vim.fs.find({'lazy-lock.json'},            { upward = true })[1]), filetypes = { 'lua' },        })
+
+-- settings = {
+--
+--                 diagnostics = {
+--                 -- Get the language server to recognize the `vim` global
+--                 globals = { "vim" },
+--             },}

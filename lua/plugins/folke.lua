@@ -21,11 +21,12 @@ return {
     { 'numToStr/Comment.nvim', opts = {} },
 
 
-    {
-        "folke/neodev.nvim", opts ={
-              lspconfig = false,
-        },
-    }
+        "folke/neodev.nvim",
+    -- {
+    --     "folke/neodev.nvim", opts ={
+    --           -- lspconfig = false,
+    --     },
+    -- }
     --     , opts = {},
     --     config = function()
     --         before_init=require("neodev.lsp").before_init
