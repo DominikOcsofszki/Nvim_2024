@@ -1,5 +1,4 @@
 
--- [[ Highlight on yank ]]
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
   callback = function()
@@ -8,9 +7,5 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
-
--- vim.lsp.start({
---   name = 'my-server-name',
---   cmd = {'name-of-language-server-executable'},
---   root_dir = vim.fs.dirname(vim.fs.find({'setup.py', 'pyproject.toml'}, { upward = true })[1]),
--- })
+-- vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = require("nvim-tree.api").tree.open })
+-- vim.api.nvim_create_autocmd({ "BufEnter" }, { callback =  })

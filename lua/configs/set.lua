@@ -9,7 +9,7 @@ vim.o.smartcase = true
 vim.o.cursorline = true
 vim.o.cursorlineopt = "number"
 vim.o.clipboard = "unnamedplus"
-vim.o.signcolumn ="yes"
+vim.o.signcolumn = "yes"
 vim.o.hlsearch = false
 vim.o.breakindent = true
 
@@ -17,16 +17,16 @@ vim.o.updatetime = 250
 vim.o.timeout = true
 vim.o.timeoutlen = 300
 
-vim.o.completeopt = 'menuone,preview'
+vim.o.completeopt = 'menuone,preview,popup'
 -- vim.o.completeopt = 'menuone,noselect'
 vim.o.so = 15
-vim.o.nu = true
+-- vim.o.nu = true
 vim.o.relativenumber = true
 
 vim.o.tabstop = 4
-vim.o.softtabstop = 4
-vim.o.shiftwidth = 4
-vim.o.expandtab = true
+-- vim.o.softtabstop = 4
+-- vim.o.shiftwidth = 4
+-- vim.o.expandtab = true
 
 
 vim.o.swapfile = false

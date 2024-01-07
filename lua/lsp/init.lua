@@ -1,2 +1,1 @@
 vim.keymap.set('n','<leader>;',':-1read snippets/test.html',{})
-vim.keymap.set('n','<leader>;',':-1read snippets/${fzf}',{})
