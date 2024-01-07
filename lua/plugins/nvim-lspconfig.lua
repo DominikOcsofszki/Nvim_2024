@@ -3,7 +3,19 @@ return {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
         dependencies = {
-            { 'williamboman/mason.nvim' },
+            -- { 'williamboman/mason.nvim' },
+            {
+                "williamboman/mason.nvim",
+                opts = {
+                    ensure_installed = {
+                        "eslint-lsp",
+                        "js-debug-adapter",
+                        "prettier",
+                        "typescript-language-server"
+                    }
+                }
+            },
+
             { 'williamboman/mason-lspconfig.nvim' },
             { 'neovim/nvim-lspconfig' },
             { 'hrsh7th/nvim-cmp' },
@@ -30,7 +42,7 @@ return {
                     }
                 })
                 -- require("lspconfig").eslint-lsp.setup {}
-                require'lspconfig'.angularls.setup{}
+                require 'lspconfig'.angularls.setup {}
 
 
                 vim.api.nvim_create_autocmd('LspAttach', {
