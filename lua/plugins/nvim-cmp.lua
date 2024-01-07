@@ -22,9 +22,12 @@ return {
 		},
 		config = function()
 			vim.diagnostic.config({
-						virtual_text = false
-				})
+				-- virtual_text = false
+			})
+			vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, {})
+
 			local cmp = require 'cmp'
+			local luasnip = require 'luasnip'
 			cmp.setup({
 				snippet = {
 					expand = function(args)
@@ -37,6 +40,26 @@ return {
 				},
 				mapping = cmp.mapping.preset.insert({
 					['<C-y>'] = cmp.mapping.confirm({ select = true }),
+					['<CR>'] = cmp.mapping.confirm({ select = true }),
+					['<Tab>'] = cmp.mapping(function(fallback)
+						if cmp.visible() then
+							cmp.select_next_item()
+						elseif luasnip.expand_or_jumpable() then
+							luasnip.expand_or_jump()
+						else
+							fallback()
+						end
+					end, { 'i', 's' }),
+					['<S-Tab>'] = cmp.mapping(function(fallback)
+						if cmp.visible() then
+							cmp.select_prev_item()
+						elseif luasnip.jumpable(-1) then
+							luasnip.jump(-1)
+						else
+							fallback()
+						end
+					end, { 'i', 's' }),
+
 				}),
 				-- sources = cmp.config.sources({
 				sources = cmp.config.sources({
@@ -88,24 +111,24 @@ return {
 			-- 	capabilities = capabilities
 			-- }
 
-			local cmp_select = { behavior = cmp.SelectBehavior.Select }
-
-			cmp.setup({
-				sources = {
-					{ name = 'path' },
-					{ name = 'nvim_lsp' },
-					{ name = 'nvim_lua' },
-					{ name = 'luasnip', keyword_length = 2 },
-					{ name = 'buffer',  keyword_length = 3 },
-				},
-				-- formatting = lsp_zero.cmp_format(),
-				mapping = cmp.mapping.preset.insert({
-					['<S-Tab>'] = cmp.mapping.select_prev_item(cmp_select),
-					['<Tab>'] = cmp.mapping.select_next_item(cmp_select),
-					-- ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-					['<C-Space>'] = cmp.mapping.complete(),
-				}),
-			})
+			-- local cmp_select = { behavior = cmp.SelectBehavior.Select }
+			--
+			-- cmp.setup({
+			-- 	sources = {
+			-- 		{ name = 'path' },
+			-- 		{ name = 'nvim_lsp' },
+			-- 		{ name = 'nvim_lua' },
+			-- 		{ name = 'luasnip', keyword_length = 2 },
+			-- 		{ name = 'buffer',  keyword_length = 3 },
+			-- 	},
+			-- 	-- formatting = lsp_zero.cmp_format(),
+			-- 	mapping = cmp.mapping.preset.insert({
+			-- 		['<S-Tab>'] = cmp.mapping.select_prev_item(cmp_select),
+			-- 		['<Tab>'] = cmp.mapping.select_next_item(cmp_select),
+			-- 		-- ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+			-- 		['<C-Space>'] = cmp.mapping.complete(),
+			-- 	}),
+			-- })
 		end
 
 
