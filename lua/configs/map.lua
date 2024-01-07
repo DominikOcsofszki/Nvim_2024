@@ -28,7 +28,7 @@ vim.keymap.set('n', '<leader>so', ':Telescope oldfiles<enter>', {})
 -- vim.keymap.set('n' ,'<leader>f' ,':Telescope find_files <enter><esc>',{})
 vim.keymap.set('n', '<leader>f', ':Telescope find_files <enter>', {})
 
-vim.keymap.set('n', 'm', ':', {})
+-- vim.keymap.set('n', 'm', ':', {})
 -- vim.keymap.set('n','<leader>a',require('telescope.builtin').oldfiles,{})
 
 -- vim.keymap.set('n', '<leader>a', function()
@@ -36,6 +36,7 @@ vim.keymap.set('n', 'm', ':', {})
 -- end, { desc = '[/] Fuzzily search in current buffer' })
 
 vim.keymap.set('n', '<leader>=', 'gg gqG', {})
+vim.keymap.set('n', '<leader>=', 'ml gg gqG `l', {})
 vim.keymap.set('n', '<leader>]', ':bnext<enter>', {})
 vim.keymap.set('n', '<leader>[', ':bprev<enter>', {})
 
