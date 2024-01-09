@@ -47,3 +47,27 @@ vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic message" })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
 
+
+vim.keymap.set('i', 'jk', '<esc>')
+vim.keymap.set('i', 'kj', '<esc>')
+vim.keymap.set('n', '<C-,>', ':vertical resize +5<CR>')
+vim.keymap.set('n', '<C-.>', ':vertical resize -5<CR>')
+
+vim.keymap.set('n', '<leader>jt', ':Trouble <CR>', {})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

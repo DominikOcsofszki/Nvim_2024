@@ -13,3 +13,27 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- 	pattern = { "*.lua" },
 -- 	command = "echo 'Entering a lua'",
 -- })
+vim.api.nvim_create_autocmd('filetype', {
+  pattern = 'netrw',
+  desc = 'Better mappings for netrw',
+  callback = function()
+    local bind = function(lhs, rhs)
+      vim.keymap.set('n', lhs, rhs, {remap = true, buffer = true})
+    end
+    -- edit new file
+    -- bind('c', '%')
+    -- rename file
+    -- bind('r', 'R')
+	bind('<Tab>','p')
+	bind('<C-j>','jp')
+	bind('<C-k>','kp')
+	-- CursorMoved
+	-- vim.api.nvim_create_autocmd('CursorMoved', {
+	-- 		callback = function ()
+	-- 			vim.fn.feedkeys("p")
+	-- 		end
+	-- }
+	-- )
+  end
+})
+

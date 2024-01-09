@@ -29,5 +29,19 @@ vim.o.tabstop = 4
 -- vim.o.expandtab = true
 
 
-vim.o.swapfile = false
--- vim.o.fdm = 'indent'
+vim.o.swapfile           = false
+
+-- vim.o.splitbelow         = true
+-- vim.o.splitright         = true
+vim.o.title              = true
+vim.g.netrw_banner       = 0
+-- vim.g.netrw_browse_split = 4
+vim.g.netrw_altv         = 1
+vim.g.netrw_liststyle    = 3
+-- vim.g.netrw_preview      = 1
+-- vim.g.netrw_winsize   = 30
+vim.g.netrw_preview   = 1
+vim.g.netrw_winsize = 15
+
+-- vim.opt.path = vim.opt.path + "**"
+-- vim.opt.path:append '**'
