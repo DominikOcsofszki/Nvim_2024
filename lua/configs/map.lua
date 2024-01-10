@@ -49,25 +49,17 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = "Go to next diagnos
 
 
 vim.keymap.set('i', 'jk', '<esc>')
+vim.keymap.set('i', 'jj', '<esc>')
+vim.keymap.set('i', 'kk', '<esc>')
 vim.keymap.set('i', 'kj', '<esc>')
 vim.keymap.set('n', '<C-,>', ':vertical resize +5<CR>')
 vim.keymap.set('n', '<C-.>', ':vertical resize -5<CR>')
 
 vim.keymap.set('n', '<leader>jt', ':Trouble <CR>', {})
+-- vim.keymap.set('n', '<C-h>', '<C-w>h', {})
+-- vim.keymap.set('n', '<C-l>', '<C-w>l', {})
+-- vim.keymap.set('n', '<leader><C-o>',':lua vim.cmd( expand("%:p:h"))')
+vim.keymap.set('n', '<leader><C-o>',':cd %:p:h<CR>')
+vim.keymap.set('n', '<leader><C-p>',':cd! %:p:h<CR>')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+vim.keymap.set('n', '<leader>oo',':NvimTreeFindFile<CR>')
