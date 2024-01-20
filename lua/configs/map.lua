@@ -15,7 +15,6 @@ vim.keymap.set('n', '|', ':q<enter>', {})
 vim.keymap.set('n', '<leader><space>', '/', {})
 vim.keymap.set('v', '<leader><space>', '/', {})
 
--- vim.keymap.set('n', '<leader>oo', '<cmd>:NvimTreeFindFile<cr>', {desc = "<cmd>:NvimTreeFindFile<cr>"})
 --
 -- vim.keymap.set('n', '<C-s>', require('nvim-tree.api').tree.toggle, {desc = "Tree toggle"})
 
@@ -48,6 +47,9 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = "Go to previous dia
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
 
 
+vim.keymap.set('n', '<C-j>', ':cn<cr>')
+vim.keymap.set('n', '<C-k>', ':cp<cr>')
+vim.keymap.set('n', '<tab><tab>', '<c-w>w')
 vim.keymap.set('i', 'jk', '<esc>')
 vim.keymap.set('i', 'jj', '<esc>')
 vim.keymap.set('i', 'kk', '<esc>')
@@ -59,7 +61,46 @@ vim.keymap.set('n', '<leader>jt', ':Trouble <CR>', {})
 -- vim.keymap.set('n', '<C-h>', '<C-w>h', {})
 -- vim.keymap.set('n', '<C-l>', '<C-w>l', {})
 -- vim.keymap.set('n', '<leader><C-o>',':lua vim.cmd( expand("%:p:h"))')
-vim.keymap.set('n', '<leader><C-o>',':cd %:p:h<CR>')
-vim.keymap.set('n', '<leader><C-p>',':cd! %:p:h<CR>')
+vim.keymap.set('n', '<leader><C-o>', ':cd %:p:h<CR>')
+vim.keymap.set('n', '<leader><C-p>', ':cd! %:p:h<CR>')
 
-vim.keymap.set('n', '<leader>oo',':NvimTreeFindFile<CR>')
+vim.keymap.set('n', '<leader>oo', ':NvimTreeFindFile<CR>')
+
+vim.keymap.set('n', '<leader>gg',
+        ":lua vim.ui.input({prompt = ' Grep > '}, function(value) require('telescope.builtin').grep_string({search = value}) end)<CR>")
+
+
+vim.keymap.set('n', '<leader>oj',
+':lua vim.lsp.buf.format {        filter = function(client) return client.name == "jdtls" end}')
+
+	vim.api.nvim_exec([[
+    augroup telescope
+        autocmd!
+        autocmd FileType TelescopePrompt inoremap <buffer> <silent> <C-r> <C-r>
+    augroup END]], false)
+
+
+vim.keymap.set('n', '<leader>gg',
+        ":lua vim.ui.input({prompt = ' Grep > '}, function(value) require('telescope.builtin').live_grep({search = value}) end)<CR>")
+
+
+
+
+
+
+
+
+
+
+
+
+
+vim.keymap.set('n', '<leader>1', ":!pwd|pbcopy<CR><C-\\><C-n>:cd <C-r>+<CR>")
+-- vim.keymap.set('n', '<leader>0', ":!pwd|pbcopy<CR><C-\\><C-n>:cd <C-r>+<CR>:!export ")
+
+
+
+
+
+vim.keymap.set('n', '<leader>oo', '<cmd>:NvimTreeFindFile<cr>', {desc = "<cmd>:NvimTreeFindFile<cr>"})
+vim.keymap.set('n', '<leader>og', '<cmd>lua require"telescope".extensions.projects.projects{}<cr>', {desc = "open projects"})

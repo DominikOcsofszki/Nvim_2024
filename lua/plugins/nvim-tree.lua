@@ -10,8 +10,8 @@ return {
       -- on_attach = "default",
       -- hijack_cursor = false,
       -- auto_reload_on_write = true,
-      -- disable_netrw = false,
-      -- hijack_netrw = true,
+      -- disable_netrw = true,
+      hijack_netrw = true,
       -- hijack_unnamed_buffer_when_opening = false,
       -- root_dirs = {},
       -- prefer_startup_root = false,
@@ -25,6 +25,7 @@ return {
       --   files_first = false,
       -- },
       view = {
+          adaptive_size = true,
         -- centralize_selection = false,
         -- cursorline = true,
         -- debounce_delay = 15,

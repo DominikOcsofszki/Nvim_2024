@@ -12,7 +12,7 @@ return {
 						-- disables netrw and use telescope-file-browser in its place
 						hijack_netrw = false,
 						depth = 'auto_depth',
-						grouped = true,
+						-- grouped = true,
 						select_buffer = true,
 						      -- auto_depth = true,
 
