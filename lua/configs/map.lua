@@ -83,24 +83,11 @@ vim.keymap.set('n', '<leader>oj',
 vim.keymap.set('n', '<leader>gg',
         ":lua vim.ui.input({prompt = ' Grep > '}, function(value) require('telescope.builtin').live_grep({search = value}) end)<CR>")
 
-
-
-
-
-
-
-
-
-
-
-
-
+vim.keymap.set('n', '<leader>ot', '<cmd>:NvimTreeFindFile<cr><C-w>T', {desc = "<cmd>:NvimTreeFindFile<cr>"})
 vim.keymap.set('n', '<leader>1', ":!pwd|pbcopy<CR><C-\\><C-n>:cd <C-r>+<CR>")
 -- vim.keymap.set('n', '<leader>0', ":!pwd|pbcopy<CR><C-\\><C-n>:cd <C-r>+<CR>:!export ")
-
-
-
-
-
 vim.keymap.set('n', '<leader>oo', '<cmd>:NvimTreeFindFile<cr>', {desc = "<cmd>:NvimTreeFindFile<cr>"})
 vim.keymap.set('n', '<leader>og', '<cmd>lua require"telescope".extensions.projects.projects{}<cr>', {desc = "open projects"})
+
+vim.keymap.set('n', '<leader>t', ':tabnew %', {})
+vim.keymap.set('t', '<backspace>', '<C-\\><C-n>', {})

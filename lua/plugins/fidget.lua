@@ -1,9 +1,7 @@
-return {}
--- 		{
--- {
---   "j-hui/fidget.nvim",
---   tag = "v1.0.0",
---   opts = {
---     -- options
---   },
--- }}}
+return {
+    {
+        "j-hui/fidget.nvim",
+        tag = "v1.0.0",
+        config = true
+    }
+}
