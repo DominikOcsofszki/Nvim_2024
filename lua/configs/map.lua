@@ -85,10 +85,3 @@ vim.keymap.set('n', '<leader>b', ':Telescope buffers<cr><esc>', {})
 
 
 
-vim.keymap.set('n', '<leader>j1',':%!jq keys<cr>',{})
--- vim.keymap.set('n', '<leader>j2',':%!jq .',{})
--- vim.keymap.set('n', '<leader>j2','yi"u :%!jq .',{})
--- vim.keymap.set('n', '<leader>j2','yi"u :%!jq .<c-r>*<cr>',{})
-vim.keymap.set('n', '<leader>j2','yi"u :%!jq .<c-r>*<cr>',{})
-vim.keymap.set('n', '<leader>j3','yyu :%!jq .<c-r>*',{})
-
