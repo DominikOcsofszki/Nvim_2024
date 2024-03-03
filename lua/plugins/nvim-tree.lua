@@ -20,7 +20,7 @@ return {
             -- sync_root_with_cwd = false,
             -- reload_on_bufenter = false,
             -- respect_buf_cwd = false,
-            respect_buf_cwd = true,
+            -- respect_buf_cwd = true,
             -- select_prompts = false,
             -- sort = {
             --   sorter = "name",
@@ -184,8 +184,9 @@ return {
                 -- dotfiles = false,
                 -- git_clean = false,
                 -- no_buffer = false,
+                -- no_bookmark = true,
                 -- no_bookmark = false,
-                -- custom = {},
+                -- custom = {".spec",".css","/$"},
                 -- exclude = {},
             },
             live_filter = {
@@ -277,5 +278,6 @@ return {
             --   },
             -- },
         } -- END_DEFAULT_OPTS
-    end
+    end,
+
 }

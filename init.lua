@@ -23,3 +23,5 @@ require("configs")
 
 
 -- require("extra.startup")
+
+    -- vim.cmd([[colorscheme tokyonight]])

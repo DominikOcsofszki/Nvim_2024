@@ -1,3 +1,5 @@
+vim.keymap.set('n', '<leader>6', ':ls<CR>:b<Space>', {})
+
 vim.keymap.set('n', 'Y', '"pyy"pp', {})
 -- vim.keymap.set('n', '<Leader>e', ':e .<enter>',{})
 vim.keymap.set('n', '<leader>jr', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], {})
@@ -15,25 +17,6 @@ vim.keymap.set('n', '|', ':q<enter>', {})
 vim.keymap.set('n', '<leader><space>', '/', {})
 vim.keymap.set('v', '<leader><space>', '/', {})
 
---
--- vim.keymap.set('n', '<C-s>', require('nvim-tree.api').tree.toggle, {desc = "Tree toggle"})
-
-
--- vim.keymap.set('n', '<leader>6', ':ls<CR>:b<Space>', {})
-vim.keymap.set('n', '<leader>w', ':Telescope file_browser path=%:p:h<enter><esc>', {})
-vim.keymap.set('n', '<Leader>e', ':Telescope file_browser <enter>', {})
-vim.keymap.set('n', '<leader>ss', ':Telescope <enter>', {})
-vim.keymap.set('n', '<leader>so', ':Telescope oldfiles<enter>', {})
--- vim.keymap.set('n' ,'<leader>f' ,':Telescope find_files <enter><esc>',{})
-vim.keymap.set('n', '<leader>f', ':Telescope find_files <enter>', {})
-
--- vim.keymap.set('n', 'm', ':', {})
--- vim.keymap.set('n','<leader>a',require('telescope.builtin').oldfiles,{})
-
--- vim.keymap.set('n', '<leader>a', function()
--- 	require('telescope.builtin').lsp_definitions
--- end, { desc = '[/] Fuzzily search in current buffer' })
-
 vim.keymap.set('n', '<leader>=', 'gg gqG', {})
 vim.keymap.set('n', '<leader>=', 'ml gg gqG `l', {})
 vim.keymap.set('n', '<leader>]', ':bnext<enter>', {})
@@ -49,7 +32,7 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = "Go to next diagnos
 
 vim.keymap.set('n', '<C-j>', ':cn<cr>')
 vim.keymap.set('n', '<C-k>', ':cp<cr>')
-vim.keymap.set('n', '<tab><tab>', '<c-w>w')
+-- vim.keymap.set('n', '<tab><tab>', '<c-w>w')
 vim.keymap.set('i', 'jk', '<esc>')
 vim.keymap.set('i', 'jj', '<esc>')
 vim.keymap.set('i', 'kk', '<esc>')
@@ -89,5 +72,23 @@ vim.keymap.set('n', '<leader>1', ":!pwd|pbcopy<CR><C-\\><C-n>:cd <C-r>+<CR>")
 vim.keymap.set('n', '<leader>oo', '<cmd>:NvimTreeFindFile<cr>', {desc = "<cmd>:NvimTreeFindFile<cr>"})
 vim.keymap.set('n', '<leader>og', '<cmd>lua require"telescope".extensions.projects.projects{}<cr>', {desc = "open projects"})
 
-vim.keymap.set('n', '<leader>t', ':tabnew %', {})
+vim.keymap.set('n', '<leader>t', ':tabnew %<cr>', {})
 vim.keymap.set('t', '<backspace>', '<C-\\><C-n>', {})
+
+
+vim.keymap.set('n', 'gd', '<cmd>tab split | lua vim.lsp.buf.definition()<CR>', {})
+vim.keymap.set('v', 'v', 'V', {})
+
+vim.keymap.set('n', '<leader>p', ':Telescope neoclip<cr>', {})
+vim.keymap.set('n', '<leader>b', ':Telescope buffers<cr><esc>', {})
+
+
+
+
+vim.keymap.set('n', '<leader>j1',':%!jq keys<cr>',{})
+-- vim.keymap.set('n', '<leader>j2',':%!jq .',{})
+-- vim.keymap.set('n', '<leader>j2','yi"u :%!jq .',{})
+-- vim.keymap.set('n', '<leader>j2','yi"u :%!jq .<c-r>*<cr>',{})
+vim.keymap.set('n', '<leader>j2','yi"u :%!jq .<c-r>*<cr>',{})
+vim.keymap.set('n', '<leader>j3','yyu :%!jq .<c-r>*',{})
+
