@@ -73,7 +73,7 @@ vim.keymap.set('n', '<leader>oo', '<cmd>:NvimTreeFindFile<cr>', {desc = "<cmd>:N
 vim.keymap.set('n', '<leader>og', '<cmd>lua require"telescope".extensions.projects.projects{}<cr>', {desc = "open projects"})
 
 vim.keymap.set('n', '<leader>t', ':tabnew %<cr>', {})
-vim.keymap.set('t', '<backspace>', '<C-\\><C-n>', {})
+vim.keymap.set('t', '<F12>', '<C-\\><C-n>', {})
 
 
 vim.keymap.set('n', 'gd', '<cmd>tab split | lua vim.lsp.buf.definition()<CR>', {})

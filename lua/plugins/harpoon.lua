@@ -14,7 +14,7 @@ return {
 			vim.keymap.set('n', '<Space>j4', ':lua require("harpoon.ui").nav_file(4)<CR>')
 		end
 	},
-	-- {
+	-- niFiles.open(){
 	-- 	"j-hui/fidget.nvim",
 	-- 	opts = {
 	-- 		-- options
