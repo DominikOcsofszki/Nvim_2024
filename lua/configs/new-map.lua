@@ -7,18 +7,11 @@ end, { nargs = '+', complete = 'command' })
 
 
 vim.keymap.set('n', '<leader>j1',':%!jq keys<cr>',{})
--- vim.keymap.set('n', '<leader>j1',':Redir :%!jq keys<cr>',{})
--- vim.keymap.set('n', '<leader>j2',':%!jq .',{})
--- vim.keymap.set('n', '<leader>j2','yi"u :%!jq .',{})
--- vim.keymap.set('n', '<leader>j2','yi"u :%!jq .<c-r>*<cr>',{})
 vim.keymap.set('n', '<leader>j2','yi"u :%!jq .<c-r>*<cr>',{})
 vim.keymap.set('n', '<leader>j3','yyu :%!jq .<c-r>*',{})
 
--- set-option -g -q mouse on
-
 -- jq -r 'paths(scalars) | map(if type == "number" then "[\(. | tostring)]" else "." + tostring end) | join("")' json_example.json
 vim.keymap.set('n', '<leader>j3','yyu :%!jq .<c-r>*',{})
-
 
 
 -- ='jq -r \'paths(scalars) | map(if type == "number" then "[\(. | tostring)]" else "." + tostring end) | join("")\' json_example.json'
@@ -35,4 +28,7 @@ vim.keymap.set('n', '<leader>j3','yyu :%!jq .<c-r>*',{})
 --     vim.cmd('jq -r '\''paths(scalars) | map(if type == "number" then "[\(. | tostring)]" else "." + tostring end) | join("")'\''')
 --     end,
 --     {})
+
+vim.keymap.set('n', '<leader><space>',':find',{})
+-- vim.keymap.set('n', '',':let @+ = expand("%")',{})
 

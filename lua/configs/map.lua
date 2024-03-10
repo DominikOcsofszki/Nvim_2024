@@ -1,10 +1,11 @@
 vim.keymap.set('n', '<leader>6', ':ls<CR>:b<Space>', {})
 
-vim.keymap.set('n', 'Y', '"pyy"pp', {})
 -- vim.keymap.set('n', '<Leader>e', ':e .<enter>',{})
 vim.keymap.set('n', '<leader>jr', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], {})
 
 -- yanking
+vim.keymap.set('n', 'Y', '"pyy"pp', {})
+vim.keymap.set('v', 'Y', '"py"pp', {})
 vim.keymap.set('n', 'cw', '"_ciw', {})
 vim.keymap.set('n', 'ciW', '"_ciW', {})
 vim.keymap.set('n', 'ci', '"_ci', {})
@@ -14,13 +15,11 @@ vim.keymap.set('n', 'di}', '"_di}', {})
 vim.keymap.set('n', '\\', ':w<enter>', {})
 vim.keymap.set('n', '|', ':q<enter>', {})
 
-vim.keymap.set('n', '<leader><space>', '/', {})
-vim.keymap.set('v', '<leader><space>', '/', {})
+-- vim.keymap.set('n', '<leader><space>', '/', {})
+-- vim.keymap.set('v', '<leader><space>', '/', {})
 
 vim.keymap.set('n', '<leader>=', 'gg gqG', {})
 vim.keymap.set('n', '<leader>=', 'ml gg gqG `l', {})
-vim.keymap.set('n', '<leader>]', ':bnext<enter>', {})
-vim.keymap.set('n', '<leader>[', ':bprev<enter>', {})
 
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
@@ -32,7 +31,6 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = "Go to next diagnos
 
 vim.keymap.set('n', '<C-j>', ':cn<cr>')
 vim.keymap.set('n', '<C-k>', ':cp<cr>')
--- vim.keymap.set('n', '<tab><tab>', '<c-w>w')
 vim.keymap.set('i', 'jk', '<esc>')
 vim.keymap.set('i', 'jj', '<esc>')
 vim.keymap.set('i', 'kk', '<esc>')
@@ -76,7 +74,7 @@ vim.keymap.set('n', '<leader>t', ':tabnew %<cr>', {})
 vim.keymap.set('t', '<F12>', '<C-\\><C-n>', {})
 
 
-vim.keymap.set('n', 'gd', '<cmd>tab split | lua vim.lsp.buf.definition()<CR>', {})
+vim.keymap.set('n', '<c-t>', '<cmd>tab split | lua vim.lsp.buf.definition()<CR>', {})
 vim.keymap.set('v', 'v', 'V', {})
 
 vim.keymap.set('n', '<leader>p', ':Telescope neoclip<cr>', {})

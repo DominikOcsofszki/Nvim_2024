@@ -37,3 +37,6 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
     command = "normal! g'\"zz"
 })
 
+vim.api.nvim_create_user_command('CopyPath', function()
+    vim.cmd(':let @+ = expand("%")')
+end, {})
