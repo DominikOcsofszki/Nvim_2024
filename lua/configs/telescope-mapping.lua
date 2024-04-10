@@ -41,4 +41,5 @@ vim.keymap.set('n', '<leader>fn', ':Telescope find_files <enter>', {})
 vim.keymap.set('n', '<leader>fg', ':Telescope find_files theme=get_cursor <enter>', {})
 vim.keymap.set('n', '<leader>fi', ':Telescope find_files theme=get_ivy <enter>', {})
 vim.keymap.set('n', '<leader>fc', ':Telescope find_files theme=get_dropdown <enter>', {})
+vim.keymap.set('n', '<leader>sg', ':Telescope live_grep_args<cr>', {})
 

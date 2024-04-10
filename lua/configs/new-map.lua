@@ -32,3 +32,5 @@ vim.keymap.set('n', '<leader>j3','yyu :%!jq .<c-r>*',{})
 vim.keymap.set('n', '<leader><space>',':find',{})
 -- vim.keymap.set('n', '',':let @+ = expand("%")',{})
 
+
+vim.keymap.set('n','<leader>r',':!python3 %<cr>',{})

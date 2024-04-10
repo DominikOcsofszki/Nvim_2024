@@ -40,3 +40,14 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 vim.api.nvim_create_user_command('CopyPath', function()
     vim.cmd(':let @+ = expand("%")')
 end, {})
+vim.api.nvim_create_user_command('CopyFullPath', function()
+    vim.cmd(':let @+ = expand("%:p")')
+end, {})
+
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+    pattern={'*.cpp','*.hpp'},
+    callback = function()
+        vim.cmd('F')
+	end,
+})
+

@@ -79,6 +79,8 @@ vim.keymap.set('v', 'v', 'V', {})
 
 vim.keymap.set('n', '<leader>p', ':Telescope neoclip<cr>', {})
 vim.keymap.set('n', '<leader>b', ':Telescope buffers<cr><esc>', {})
+vim.keymap.set('n', '<C-u>', '<c-u>zz', {})
+vim.keymap.set('n', '<C-d>', '<c-d>zz', {})
 
 
 
