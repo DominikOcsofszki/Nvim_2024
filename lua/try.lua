@@ -3,19 +3,19 @@ local M = {}
 local _config = {}
 
 function M.setup(config)
-  -- Simple variant; could also be more complex with validation, etc.
-  _config = config
+    -- Simple variant; could also be more complex ith validation, etc.
+    _config = config
 end
 
 
 function M.do_something()
-   -- local option_x = _config.option_x or 'some_default_value'
-   -- ...
-   
-   -- local parser = vim.treesitter.get_parser()
-   -- local trees = parser:parse()
-   -- local root = trees[1]:root()
-   -- local lnum, col = unpack(vim.api.nvim_win_get_cursor(0))
+    -- local option_x = _config.option_x or 'some_default_value'
+    -- ...
+
+    -- local parser = vim.treesitter.get_parser()
+    -- local trees = parser:parse()
+    -- local root = trees[1]:root()
+    -- local lnum, col = unpack(vim.api.nvim_in_get_cursor(0))
    -- lnum = lnum - 1
    -- local cursor_node = root:descendant_for_range(lnum, col, lnum, col)
    -- local parent = cursor_node:parent()

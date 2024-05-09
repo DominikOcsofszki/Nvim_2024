@@ -13,24 +13,16 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- 	pattern = { "*.lua" },
 -- 	command = "echo 'Entering a lua'",
 -- })
--- vim.api.nvim_create_autocmd('filetype', {
---   -- pattern = 'netrw',
---   pattern = {'NvimTree'},
---   desc = 'Better mappings for NvimTree',
---   callback = function()
---     local bind = function(lhs, rhs)
---       vim.keymap.set('n', lhs, rhs, {remap = true, buffer = true})
---     end
--- 	-- bind('<Tab>','p')
---
---     -- vim.keymap.set('n', '<s-tab>', '<c-w>w')
--- -- vim.keymap.set( 'n', '<C-k>', '<Nop>', { silent = true, buffer = true })
--- 	-- bind('<C-j>','j<Tab>')
--- 	-- bind('J','j<Tab>')
--- 	-- bind('K','k<Tab>')
--- 	-- bind('<C-j>','jp')
---   end
--- })
+vim.api.nvim_create_autocmd('filetype', {
+  pattern = {'qf'},
+  desc = 'Better mappings for NvimTree',
+  callback = function()
+    local bind = function(lhs, rhs)
+      vim.keymap.set('n', lhs, rhs, {remap = true, buffer = true})
+    end
+    bind('q',':q<cr>')
+  end
+})
 --
 -- vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
@@ -45,7 +37,7 @@ vim.api.nvim_create_user_command('CopyFullPath', function()
 end, {})
 
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-    pattern={'*.cpp','*.hpp'},
+    pattern={'*.cpp','*.hpp','*.tex'},
     callback = function()
         vim.cmd('F')
 	end,

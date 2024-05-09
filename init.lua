@@ -15,6 +15,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 require("lazy").setup("plugins")

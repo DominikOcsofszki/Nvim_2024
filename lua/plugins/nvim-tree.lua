@@ -28,7 +28,7 @@ return {
             --   files_first = false,
             -- },
             view = {
-                adaptive_size = true,
+                -- adaptive_size = true,
                 -- centralize_selection = false,
                 -- cursorline = true,
                 -- debounce_delay = 15,
@@ -186,8 +186,8 @@ return {
                 -- no_buffer = false,
                 -- no_bookmark = true,
                 -- no_bookmark = false,
-                -- custom = {".spec",".css","/$"},
-                -- exclude = {},
+                custom = {"Document.tex.latexmain","Document.synctex.gz", "__init__.py"},
+                -- exclude = {""},
             },
             live_filter = {
                 -- prefix = "[FILTER]: ",

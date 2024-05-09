@@ -1,4 +1,3 @@
-
 local on_attach = function(_, bufnr)
     local nmap = function(keys, func, desc)
         if desc then
@@ -37,7 +36,7 @@ return {
             { "williamboman/mason.nvim" }
         },
         config = function()
-            require("mason").setup({                ensure_installed = { "lua_ls","clangd","clang-format",}})
+            require("mason").setup({ ensure_installed = { "lua_ls", "clangd", "clang-format", } })
             require("mason-lspconfig").setup({
                 ensure_installed = { "lua_ls",
                 },
@@ -75,7 +74,7 @@ return {
                 ["clangd"] = function()
                     local lspconfig = require("lspconfig")
                     lspconfig.clangd.setup {
-                        cmd={"clangd" ,"--clang-tidy","--fallback-style=Microsoft", "--completion-style=bundled"},
+                        cmd = { "clangd", "--clang-tidy", "--fallback-style=Microsoft", "--completion-style=bundled" },
                         -- cmd={"clangd" ,"--clang-tidy", "--background-index", "--completion-style=bundled"},
                         capabilities = capabilities,
                         on_attach = on_attach,
@@ -83,6 +82,31 @@ return {
                         -- }
                     }
                 end,
+                ["ltex"] = function()
+                    -- alternative: absolute path to file
+                    -- local path_spelling = "/Users/NAME/.config/nvim/spell/spell-de.utf-8"
+                    local path_spelling = vim.fn.stdpath("config") .. "/spell/spell-de.utf-8"
+                    vim.keymap.set('n', '<leader>aw', ':!echo <c-r><c-w> >> /Users/dominikocsofszki/.config/nvim/spell/spell-de.utf-8', {})
+                    local spell_de = {}
+                    for word in io.open(path_spelling, "r"):lines() do
+                        table.insert(spell_de, word)
+                    end
+
+                    local lspconfig = require("lspconfig")
+                    lspconfig.ltex.setup {
+                        capabilities = capabilities,
+                        on_attach = on_attach,
+                        settings = {
+                            ltex = {
+                                language = "de-DE",
+                                dictionary = {
+                                    ['de-DE'] = spell_de
+                                }
+                            },
+                        },
+                    }
+                end,
+
             }
         end
     }

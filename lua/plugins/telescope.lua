@@ -36,7 +36,7 @@ return {
             -- Enable telescope fzf native, if installed
             pcall(require('telescope').load_extension, 'fzf')
             require("telescope").load_extension("live_grep_args")
-            require('telescope').load_extension('projects')
+            -- require('telescope').load_extension('projects')
             -- require("telescope").load_extension("fzf")
             -- require("telescope").load_extension("")
             -- require("telescope").load_extension("")
