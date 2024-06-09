@@ -37,6 +37,7 @@ vim.keymap.set('n', '<leader><leader>','<c-w>w',{})
 
 vim.keymap.set('n','<leader>r',':!python3 %<cr>',{})
 vim.keymap.set('n','<leader>r',':w<cr>:!python3 %<cr>',{})
+vim.keymap.set('n','<leader>c',':w<cr>:!python3 /Users/dominikocsofszki/ss2024/compiler/projekt/compiler_mod/RUN.py<cr>',{})
 -- /Users/dominikocsofszki/Dev/nvim/nvim-macos/share/nvim/runtime/keymap/german-new.vim
 vim.keymap.set('n','<leader>ge',':set kmp=german-new<cr>',{})
 
@@ -58,4 +59,28 @@ vim.keymap.set({"n","v"}, "<leader>f", live_grep_args_shortcuts.grep_word_under_
 -- vim.keymap.set("n", "<leader>f", live_grep_args_shortcuts.vim)
 
 vim.keymap.set("n","qq",":q<cr>",{})
+vim.keymap.set("n","4","$",{})
+vim.keymap.set("n","d4","d$",{})
 
+vim.keymap.set('n','<leader>gy','<cmd>CopyFullPath<cr>',{})
+vim.keymap.set('n','<leader>y','<cmd>CopyPath<CR>',{})
+
+vim.keymap.set('n','g<leader>','G',{})
+vim.keymap.set('n','<leader>g','G',{})
+
+
+
+-- function change_string()
+--     vim.cmd(':echo expand("%:.")')
+--     vim.cmd(':let @+ = expand("%:.")')
+--
+--     vim.cmd(':expand("%:.")')
+--     local old_substring = "ast_class.py"
+--     local new_substring = "lexer.py"
+--     
+--     local new_string = input_string:gsub(old_substring, new_substring)
+--     
+--     return new_string
+-- end
+-- vim.keymap.set('n','<leader>s','<cmd>CopyPath<CR>',{})
+--

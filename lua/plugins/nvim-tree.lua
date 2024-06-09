@@ -10,6 +10,7 @@ return {
             -- on_attach = "default",
             -- hijack_cursor = false,
             -- auto_reload_on_write = true,
+            disable_netrw = false,
             -- disable_netrw = true,
             hijack_netrw = true,
             -- hijack_unnamed_buffer_when_opening = false,

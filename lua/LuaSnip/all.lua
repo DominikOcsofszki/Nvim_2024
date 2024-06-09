@@ -30,10 +30,14 @@ local ms = ls.multi_snippet
 local k = require("luasnip.nodes.key_indexer").new_key
 
 return {
-  ls.add_snippets("all", {
-	s("ternary", {
-		-- equivalent to "${1:cond} ? ${2:then} : ${3:else}"
-		i(1, "cond"), t(" ? "), i(2, "then"), t(" : "), i(3, "else")
-	})
-})
+    ls.add_snippets("all", {
+        s("ternary", {
+            -- equivalent to "${1:cond} ? ${2:then} : ${3:else}"
+            i(1, "cond"), t(" ? "), i(2, "then"), t(" : "), i(3, "else")
+        }),
+        s("sout",{
+            t("System.out.println("), i(1, "printMe"), t(");"), i(2,"")
+        })
+    })
 }
+-- cond ? then : else

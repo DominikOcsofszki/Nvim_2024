@@ -6,7 +6,6 @@ function M.setup(config)
   _config = config
 end
 
-
 function M.do_sth()
    -- local option_x = _config.option_x or 'some_default_value'
    -- ...
@@ -48,3 +47,5 @@ query()
 end
 
 return M
+
+

@@ -1,0 +1,38 @@
+local function change_name(file_name, search, change_to)
+    local find_name = search
+    local s
+    if string.find(file_name, find_name) then
+        s = string.gsub(file_name, find_name, change_to)
+    end
+    return s
+end
+local function switch_file(file_name, search)
+    local tables = {}
+    tables["lexer"] = "parser"
+    tables["parser"] = "ast"
+    tables["ast"] = "lexer"
+    if string.find(file_name, search) then
+        local change_to = tables[search]
+        local s = change_name(file_name, search, change_to)
+        vim.print(s)
+        vim.cmd("e " .. s)
+    end
+end
+local function find_name_in_file(file_name, search_name)
+    if string.find(file_name, search_name) then
+        return search_name
+    end
+end
+local function switch_files()
+    local file_name = vim.fn.expand("%:.")
+    local search = find_name_in_file(file_name, "lexer")
+    if not search then
+        search = find_name_in_file(file_name, "parser")
+    end
+    if not search then
+        search = find_name_in_file(file_name, "ast")
+    end
+    switch_file(file_name, search)
+end
+
+vim.keymap.set('n', '<leader>cs', switch_files, {})

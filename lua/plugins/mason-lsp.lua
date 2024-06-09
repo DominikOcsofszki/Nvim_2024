@@ -6,10 +6,11 @@ local on_attach = function(_, bufnr)
 
         vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
     end
-    nmap("<leader>]", function() vim.diagnostic.goto_next() end, '[G]oto [D]iagnostics')
-    nmap("<leader>[", function() vim.diagnostic.goto_prev() end, '[G]oto [D]iagnostics')
+    -- nmap("<leader>]", function() vim.diagnostic.goto_next() end, '[G]oto [D]iagnostics')
+    -- nmap("<leader>[", function() vim.diagnostic.goto_prev() end, '[G]oto [D]iagnostics')
     nmap('<leader>gr', vim.lsp.buf.rename, '[R]e[n]ame')
     nmap('<leader>ga', vim.lsp.buf.code_action, '[C]ode [A]ction')
+    nmap('ga', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
     nmap('<leader>gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
     nmap('<leader>gR', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')

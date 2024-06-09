@@ -18,6 +18,7 @@ return {
 				build = "make install_jsregexp"
 			},
 			{ 'saadparwaiz1/cmp_luasnip' },
+			{ 'octaltree/cmp-look' }, --added be my
 
 		},
 		config = function()
@@ -68,6 +69,15 @@ return {
 					{ name = 'nvim_lsp' },
 					{ name = 'nvim_lua' },
 					{ name = 'buffer' },
+                    {
+                        name = 'look',
+                        keyword_length = 2,
+                        option = {
+                            convert_case = true,
+                            loud = true,
+                            dict = '/Users/dominikocsofszki/.config/nvim/lua/dict'
+                        }
+                    },
 				})
 				-- 	{ name = 'nvim_lsp' },
 				-- 	{ name = 'luasnip' }, -- For luasnip users.
