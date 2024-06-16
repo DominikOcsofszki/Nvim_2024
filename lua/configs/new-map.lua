@@ -37,7 +37,6 @@ vim.keymap.set('n', '<leader><leader>','<c-w>w',{})
 
 vim.keymap.set('n','<leader>r',':!python3 %<cr>',{})
 vim.keymap.set('n','<leader>r',':w<cr>:!python3 %<cr>',{})
-vim.keymap.set('n','<leader>c',':w<cr>:!python3 /Users/dominikocsofszki/ss2024/compiler/projekt/compiler_mod/RUN.py<cr>',{})
 -- /Users/dominikocsofszki/Dev/nvim/nvim-macos/share/nvim/runtime/keymap/german-new.vim
 vim.keymap.set('n','<leader>ge',':set kmp=german-new<cr>',{})
 
@@ -54,8 +53,8 @@ vim.keymap.set('n','<c-k>','<c-w>k',{})
 
 -- vim.keymap.set('n','<leader>fff',':Telescope live_grep_args<cr><c-r><c-w><cr> ',{})
 
-local live_grep_args_shortcuts = require("telescope-live-grep-args.shortcuts")
-vim.keymap.set({"n","v"}, "<leader>f", live_grep_args_shortcuts.grep_word_under_cursor)
+-- local live_grep_args_shortcuts = 
+-- vim.keymap.set({"n","v"}, "<leader>f", require("telescope-live-grep-args.shortcuts").grep_word_under_cursor)
 -- vim.keymap.set("n", "<leader>f", live_grep_args_shortcuts.vim)
 
 vim.keymap.set("n","qq",":q<cr>",{})

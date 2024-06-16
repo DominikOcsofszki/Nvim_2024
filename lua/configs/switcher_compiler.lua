@@ -35,4 +35,29 @@ local function switch_files()
     switch_file(file_name, search)
 end
 
+vim.keymap.set('n', '<leader>cc', switch_files, {})
+vim.keymap.set('n', '<leader><leader>', switch_files, {})
+vim.keymap.set('n', '<leader>gc', ':set cms=#%s', {})
+-- vim.keymap.set('v', '', switch_files, {})
 vim.keymap.set('n', '<leader>cs', switch_files, {})
+vim.keymap.set('n', '<leader>co', ":tabnew /Users/dominikocsofszki/ss2024/compiler/projekt/compiler_mod/data.tx <cr>gf", {})
+-- vim.keymap.set('n', '<leader>coo', ":tabnew /Users/dominikocsofszki/ss2024/compiler/projekt/compiler_mod/data.tx <cr>", {})
+vim.keymap.set('n','<leader>c',':w<cr>:!python3 /Users/dominikocsofszki/ss2024/compiler/projekt/compiler_mod/RUN.py<cr>',{})
+vim.keymap.set('n','<leader>cm',':w<cr>:Messages !python3 /Users/dominikocsofszki/ss2024/compiler/projekt/compiler_mod/RUN.py<cr>?\\^\\^\\^<cr>kk',{})
+vim.keymap.set('n','<leader>c=','oic("=============================")<esc>',{})
+
+
+
+
+
+
+
+
+
+
+
+
+-- extra cmds:
+vim.keymap.set('n','<c-j>',':cn<cr>',{})
+vim.keymap.set('n','<cr><cr>',':<up><cr>',{})
+
