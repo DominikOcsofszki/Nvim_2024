@@ -37,7 +37,7 @@ vim.g.netrw_banner       = 0
 vim.opt.path:append '**'
 -- vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 vim.opt.tw=100
-
--- SETUP ZSH FROM PROFILE:
-vim.opt.shell="/bin/zsh -l"
+--
+-- -- SETUP ZSH FROM PROFILE:
+-- vim.opt.shell="/bin/zsh -l"
 

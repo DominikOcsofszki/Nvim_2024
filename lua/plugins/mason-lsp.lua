@@ -26,7 +26,6 @@ local on_attach = function(_, bufnr)
 end
 
 
-
 return {
     {
         "neovim/nvim-lspconfig",
@@ -37,6 +36,7 @@ return {
             { "williamboman/mason.nvim" }
         },
         config = function()
+            -- lspconfig.incc_lsp.setup{}
             require("mason").setup({ ensure_installed = { "lua_ls", "clangd", "clang-format", } })
             require("mason-lspconfig").setup({
                 ensure_installed = { "lua_ls",

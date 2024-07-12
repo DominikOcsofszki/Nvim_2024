@@ -23,9 +23,3 @@ vim.keymap.set('n',"<leader>;f",":lua require('telescope.builtin').treesitter({s
 vim.keymap.set('n',"<leader>;v",":lua require('telescope.builtin').treesitter({show_line=true,symbols='var'}) <cr>",{})
 vim.keymap.set('n',"<leader>;;",":lua require('telescope.builtin').treesitter({show_line=true}) <cr>",{})
 
--- require('telescope.builtin').treesitter({show_line=true})
--- ,symbols='function'
-function asd()
-
-end
-

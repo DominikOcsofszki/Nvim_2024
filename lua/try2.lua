@@ -9,7 +9,7 @@ end
 function M.do_sth()
    -- local option_x = _config.option_x or 'some_default_value'
    -- ...
-   
+
    -- local parser = vim.treesitter.get_parser()
    -- local trees = parser:parse()
    -- local root = trees[1]:root()
