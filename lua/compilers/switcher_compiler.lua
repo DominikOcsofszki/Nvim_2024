@@ -37,7 +37,7 @@ end
 
 -- vim.keymap.set('n', '<leader>cc', switch_files, {})
 vim.keymap.set('n', '<leader><leader>', switch_files, {})
-vim.keymap.set('n', '<leader>gc', ':set cms=#%s', {})
+-- vim.keymap.set('n', '<leader>gc', ':set cms=#%s', {})
 -- vim.keymap.set('v', '', switch_files, {})
 vim.keymap.set('n', '<leader>cs', switch_files, {})
 vim.keymap.set('n', '<leader>co', ":tabnew /Users/dominikocsofszki/ss2024/compiler/projekt/compiler_mod/code.tx <cr>gf", {})

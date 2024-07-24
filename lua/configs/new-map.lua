@@ -53,7 +53,7 @@ vim.keymap.set('n','<c-k>','<c-w>k',{})
 
 -- vim.keymap.set('n','<leader>fff',':Telescope live_grep_args<cr><c-r><c-w><cr> ',{})
 
--- local live_grep_args_shortcuts = 
+-- local live_grep_args_shortcuts =
 -- vim.keymap.set({"n","v"}, "<leader>f", require("telescope-live-grep-args.shortcuts").grep_word_under_cursor)
 -- vim.keymap.set("n", "<leader>f", live_grep_args_shortcuts.vim)
 
@@ -64,8 +64,6 @@ vim.keymap.set("n","d4","d$",{})
 vim.keymap.set('n','<leader>gy','<cmd>CopyFullPath<cr>',{})
 vim.keymap.set('n','<leader>y','<cmd>CopyPath<CR>',{})
 
-vim.keymap.set('n','g<leader>','G',{})
-vim.keymap.set('n','<leader>g','G',{})
 
 
 
@@ -76,9 +74,9 @@ vim.keymap.set('n','<leader>g','G',{})
 --     vim.cmd(':expand("%:.")')
 --     local old_substring = "ast_class.py"
 --     local new_substring = "lexer.py"
---     
+--
 --     local new_string = input_string:gsub(old_substring, new_substring)
---     
+--
 --     return new_string
 -- end
 -- vim.keymap.set('n','<leader>s','<cmd>CopyPath<CR>',{})

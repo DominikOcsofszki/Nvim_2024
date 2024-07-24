@@ -47,8 +47,6 @@ vim.keymap.set('n', '<leader><C-p>', ':cd! %:p:h<CR>')
 
 vim.keymap.set('n', '<leader>oo', ':NvimTreeFindFile<CR>')
 
-vim.keymap.set('n', '<leader>gg',
-        ":lua vim.ui.input({prompt = ' Grep > '}, function(value) require('telescope.builtin').grep_string({search = value}) end)<CR>")
 
 
 vim.keymap.set('n', '<leader>oj',
@@ -61,8 +59,6 @@ vim.keymap.set('n', '<leader>oj',
     augroup END]], false)
 
 
-vim.keymap.set('n', '<leader>gg',
-        ":lua vim.ui.input({prompt = ' Grep > '}, function(value) require('telescope.builtin').live_grep({search = value}) end)<CR>")
 
 vim.keymap.set('n', '<leader>ot', '<cmd>:NvimTreeFindFile<cr><C-w>T', {desc = "<cmd>:NvimTreeFindFile<cr>"})
 vim.keymap.set('n', '<leader>1', ":!pwd|pbcopy<CR><C-\\><C-n>:cd <C-r>+<CR>")

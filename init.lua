@@ -21,6 +21,7 @@ require("neoconf")
 require("lazy").setup("plugins")
 require("configs")
 require("extra")
+require("compilers")
 
 
 -- require("extra.startup")
