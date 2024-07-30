@@ -29,7 +29,7 @@ vim.keymap.set('n', '<leader>j3','yyu :%!jq .<c-r>*',{})
 --     end,
 --     {})
 
-vim.keymap.set('n', '<leader><space>','/',{})
+-- vim.keymap.set('n', '<leader><space>','/',{})
 vim.keymap.set('n', ';;','<c-w>w',{})
 vim.keymap.set('n', '<leader><leader>','<c-w>w',{})
 -- vim.keymap.set('n', '',':let @+ = expand("%")',{})

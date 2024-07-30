@@ -34,7 +34,7 @@ vim.keymap.set('n', '<leader>slp', ":Telescope live_grep glob_pattern=" ,{})
 vim.keymap.set('n', '<leader>slp', "Telescope live_grep glob_pattern=!.git" ,{})
 
 vim.keymap.set('n', '<leader>w', ':Telescope file_browser path=%:p:h<enter><esc>', {})
-vim.keymap.set('n', '<Leader>e', ':Telescope file_browser <enter>', {})
+-- vim.keymap.set('n', '<Leader>e', ':Telescope file_browser <enter>', {})
 vim.keymap.set('n', '<leader>ss', ':Telescope <enter>', {})
 vim.keymap.set('n', '<leader>so', ':Telescope oldfiles<enter>', {})
 vim.keymap.set('n', '<leader>fn', ':Telescope find_files <enter>', {})
