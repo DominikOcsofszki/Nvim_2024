@@ -72,6 +72,37 @@ return {
                         }
                     }
                 end,
+                ["pylsp"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.pylsp.setup {
+                    on_attach = on_attach,
+                    settings = {
+                        pylsp = {
+                        plugins = {
+                            -- formatter options
+                            ruff = { enabled = true },
+                            black = { enabled = false },
+                            autopep8 = { enabled = false },
+                            yapf = { enabled = false },
+                            -- linter options
+                            pylint = { enabled = true, executable = "pylint" },
+                            pyflakes = { enabled = false },
+                            pycodestyle = { enabled = false },
+                            -- type checker
+                            pylsp_mypy = { enabled = true },
+                            -- auto-completion options
+                            jedi_completion = { fuzzy = true },
+                            -- import sorting
+                            pyls_isort = { enabled = true },
+                        },
+                        },
+                    },
+                    flags = {
+                        debounce_text_changes = 200,
+                    },
+                    capabilities = capabilities,
+                    }
+                end,
                 ["clangd"] = function()
                     local lspconfig = require("lspconfig")
                     lspconfig.clangd.setup {
@@ -83,11 +114,13 @@ return {
                         -- }
                     }
                 end,
+
                 ["ltex"] = function()
                     -- alternative: absolute path to file
                     -- local path_spelling = "/Users/NAME/.config/nvim/spell/spell-de.utf-8"
                     local path_spelling = vim.fn.stdpath("config") .. "/spell/spell-de.utf-8"
                     vim.keymap.set('n', '<leader>aw', ':!echo <c-r><c-w> >> /Users/dominikocsofszki/.config/nvim/spell/spell-de.utf-8', {})
+                    vim.keymap.set('v', '<leader>aw', 'y:!echo <c-r>" >> /Users/dominikocsofszki/.config/nvim/spell/spell-de.utf-8', {})
                     local spell_de = {}
                     for word in io.open(path_spelling, "r"):lines() do
                         table.insert(spell_de, word)

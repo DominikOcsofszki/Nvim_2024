@@ -21,3 +21,7 @@ vim.keymap.set('n','<leader>cp','0yiboic(">>>>",<c-r>")<esc>:w<cr>',{})
 vim.keymap.set('n','<leader>cp','0yiboic(<c-r>")<esc>:w<cr>',{})
 
 -- vim.keymap.set('n','<leader>r',':luafile /Users/dominikocsofszki/.config/nvim/lua/try_rand.lua<cr>',{})
+--
+vim.keymap.set('i','<F12>','<esc>0y$A,"<c-r>"");<esc>o',{})
+vim.keymap.set('n','<F12>','d$<esc>0y$A,"<c-r>"");<esc>j0f,f,',{})
+
